@@ -1,482 +1,357 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title> WHAT YOU NEED</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
-<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
-<link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
-<script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
-<script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
-<link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" type="text/css" rel="stylesheet">
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,500italic,600italic,700italic,300,400,600,700,800" type="text/css" rel="stylesheet">
-<style type="text/css">
-.resizedTextbox {width: 300px; height: 35px}
-    /* CUSTOMIZE THE NAVBAR
-    -------------------------------------------------- */
- 
-    /* Special class on .container surrounding .navbar, used for positioning it into place. */
-    .navbar-wrapper {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 4;
-      margin-top: 10px;
-      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
-   
+    <head>
+        <meta charset="utf-8">
+        <title>bub hubs</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+		<!-- Fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css" />
+		<link href="http://fonts.googleapis.com/css?family=Maven+Pro:400,700" rel="stylesheet" type="text/css" />
+        <link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
+
+	   
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">		
+        <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.fancybox-thumbs.css?v=1.0.2" />
+        <link href="css/animate.css" rel="stylesheet" type="text/css" />
+        <link href="css/isotope.css" rel="stylesheet" type="text/css" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="css/style-responsive.css" rel="stylesheet" type="text/css" />
+  
+        <!-- Le fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="ico/favicon.png">
+
+		<style type="text/css">
+		<!--
+		div.addthis_toolbox {
+			width: 210px;
+			margin: 0 auto;
+		}
+		
+		-->
+		</style>
+		
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-43006847-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+    </head>
+
+    <body>
+
+        <div class="navbar-wrapper" >
+            <div class="navbar navbar-fixed-top" id="navigation">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="brand" href="#"><b>WHAT YOU NEED </b> </a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-right">
+                                <li class="active">
+                                    <a href="#top">Home</a>
+                                </li>
+                                <li class="">
+                                    <a href="#features">Orders</a>
+                                </li>
+                                <li class="">
+                                    <a href="#contact">Contact</a>
+                                </li>
+                            </ul><!-- /.nav pull-right -->
+                        </div><!-- /.nav-collapse collapse -->
+						
+                    </div><!-- /.container -->
+                </div><!-- /.navbar-inner -->
+            </div><!-- /.navbar navbar-fixed-top -->
+        </div><!-- /.navbar-wrapper -->
 
 
- }
-    .navbar-wrapper .navbar {
- 
-    }
- 
-    /* Remove border and change up box shadow for more contrast */
-    .navbar .navbar-inner {
-      border: 0;
-      -webkit-box-shadow: 0 2px 10px rgba(25,0,0,.25);
-         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-              box-shadow: 0 2px 10px rgba(0,0,0,.25);
-    }
- 
-    /* Downsize the brand/project name a bit */
-    .navbar .brand {
-      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
-      font-size: 16px;
-      font-weight: bold;
-      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
-    }
- 
-    /* Navbar links: increase padding for taller navbar */
-    .navbar .nav > li > a {
-      padding: 15px 20px;
-    }
- 
-    /* Offset the responsive button for proper vertical alignment */
-    .navbar .btn-navbar {
-      margin-top: 5px;
-    }
- 
- 
- 
-    /* CUSTOMIZE THE CAROUSEL
-    -------------------------------------------------- */
- 
-    /* Carousel base class */
-    .carousel {
-      margin-bottom: 10px;
-    }
- 
-    .carousel .container {
-      position: relative;
-      z-index: 9;
-    }
- 
-    .carousel-control {
-      height: 60px;
-      margin-top: 0;
-      font-size: 120px;
-      text-shadow: 0 1px 1px rgba(0,0,0,.4);
-      background-color: transparent;
-      border: 0;
-      z-index: 10;
-    }
- 
-    .carousel .item {
-      height: 500px;
-    }
-    .carousel img {
-      position: absolute;
-      top: 0;
-      left: 50;
-      min-width: 100%;
-      height: 500px;
-    }
- 
-    .carousel-caption {
-      background-color: transparent;
-      position: static;
-      max-width: 1000px;
-      padding: 0 20px;
-      margin-top: 200px;
-    }
-    .carousel-caption h1,
-    .carousel-caption .lead {
-      margin: 0;
-      line-height: 0.75;
-      color: #fff;
-      text-shadow: 0 1px 1px rgba(0,0,0,1.0);
-    }
-    .carousel-caption .btn {
-      margin-top: 8 px;
-    }
- 
- @media (max-width: 979px) {
- 
-      .container.navbar-wrapper {
-        margin-bottom: 0;
-        width: auto;
-      }
-      .navbar-inner {
-        border-radius: 0;
-        margin: -20px 0;
-      }
- 
-      .carousel .item {
-        height: 500px;
-      }
-      .carousel img {
-        width: auto;
-        height: 500px;
-      }
-    }
- 
- 
-    @media (max-width: 767px) {
- 
-      .navbar-inner {
-        margin: -20px;
-      }
- 
-      .carousel {
-        margin-left: -20px;
-        margin-right: -20px;
-      }
-      .carousel .container {
- 
-      }
-      .carousel .item {
-        height: 300px;
-      }
-      .carousel img {
-        height: 300px;
-      }
-      .carousel-caption {
-        width: 65%;
-        padding: 0 70px;
-        margin-top: 100px;
-      }
-      .carousel-caption h1 {
-        font-size: 30px;
-      }
-      .carousel-caption .lead,
-      .carousel-caption .btn {
-        font-size: 18px;
-      }
-    }
+        <!--################ NAVIGATION END ################-->
 
+        <!--################ WRAP START ################-->
 
-body {
-  font-family:'Open Sans',Helvetica,Arial,sans-serif;
-}
+        <div id="wrap">
 
-.heading,.subheading {
-  font-family:'Ubuntu',Helvetica,Arial,sans-serif;
-  text-align:center;  
-}
+            <!--################ HEADER START ################-->
 
-p.lead {
-     padding-top: 1.5%;
-      font-size:24px;
-      line-height:30Px; 
-}
+            <header id="top" data-stellar-background-ratio="0">
+                <div class="container home">
+					<div class="row-fluid margintop10 marginbot20">
+						<div class="tagline">
+								<h2></h2>
+							</div>
+					</div>
+					
+					<div class="row-fluid">
+						<div class="span6">
+                    		<div class="flexslider home">
+	                       		<ul class="slides">
+		                            <li>
+										<h1><i class="icon-ok-circle icon-2x"></i>
+											<i class="icon-lock icon-2x"></i>
+											<i class="icon-globe icon-2x"></i>
+											<br />
+											<br />
+											<br /><b></b></h1>
+									</li>
 
-p {
-    font-size:18px;
-    line-height: 24px; 
-}
+		                            <li class="margin5">
+										<div class="span12 animated fadeInDownBig">
+											<h1> 
+												<br /> 
+												<br /><b></b></h1>
+										</div>
+		                            </li>
+							
+		                            <li>
+		                                <div class="span5 animated fadeInLeftBig">
+		                                    <h1><i class="icon-bullhorn"></i><i class="icon-group"></i><i class="icon-food"></i>
+												<br /> 
+												<br /></h1>
+		                                </div>
+		                                <div class="span6">
+		                                    <img src="http://www.wfp.org/sites/default/files/HungerMap.jpg">
+		                                </div>
+		                            </li>
+							
+		                            <li class="margintop10p">
+										<h1>
+											<i class="icon-envelope icon-2x"></i><i class="icon-lock icon-2x"></i><i class="icon-globe icon-2x"></i>
+											<br />
+											<br /> 
+											<br />
+										</h1>
+									</li>
+		                        </ul><!-- /.slides -->
+                    		</div><!-- /.flexslider home -->
+						</div><!-- /.span6 -->
+						
+						<div id="sponsor" class="empty"></div>
+						
+						<div class="span5 offset1 bitstarter-box hidden-phone">
+							<div class="span8 offset2 statistics">
+								<div class="span4">
+									<div class="linediv-l">
+										<h3>1,210</h3> <p>backers</p>
+									</div>
+								</div>
+								<div class="span4">
+									<div class="linediv-c">
+										<h3>$6,550</h3> <p>of $12,000</p>
+									</div>
+								</div>
+								<div class="span4">
+									<div class="linediv-r">
+										<h3>100</h3> <p>days left</p>
+									</div>
+								</div>
+							</div>
 
-.pitch {
-    padding:2.5% 0%;
-      }
-.order {
-      padding:2% 0%;
-      }
-.actions {
-       background-color: #343434;
-       padding:2% 0%; 
-     }
-.video,.thermometer,.order,.social,.statistics {
- text-align: center;
-}
-.statistics h3,.statistics p {
-  color:white;
-}
+							<div class="span9 offset1">
+								<div class="thermometer progress progress-warning">
+									<div class="bar" style="width: 55%"></div>
+								</div>
+							</div>
 
-.copy {
-     padding-top: 2.5%;
-     padding-bottom:2.5%;
-     text-align: justify; 
-}
-.asset {
-      padding: 0.5% 0%;
-}
+							<div class="span12 center">
+								<a 
+									class="coinbase-button" 
+									data-code="a58673bbd97f8fb0e0293c68427e1262" 
+									data-button-style="custom_large" 
+									data-button-text="Sponsor With Bitcoin" 
+									data-custom="bitstarter-bubhubs" 
+									href="https://coinbase.com/checkouts/a58673bbd97f8fb0e0293c68427e1262">
+										Sponsor With Bitcoin</a>
+									<script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
+							</div>
+							
+							
+							<div class="span12">
+								<!-- AddThis Button BEGIN -->
+								<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+								<a class="addthis_button_preferred_1"></a>
+								<a class="addthis_button_preferred_2"></a>
+								<a class="addthis_button_preferred_3"></a>
+								<a class="addthis_button_compact"></a>
+								<a class="addthis_counter addthis_bubble_style"></a>
+								</div>
+								<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+								<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5202c63349dec955"></script>
+								<!-- AddThis Button END -->
+							</div>
+						</div><!-- /.bitstarter-box -->
+						
+					</div><!-- /.row-fluid -->
 
-.footer {
-    color: #cccccc;
-    text-align:center;
-}
-.footer p {
-   font size:11px;
-}
- 
-.footer a {
-color:#ccccff;
-}
+                    <div class="social-header hidden-phone">
+						<p>Stay updated with the latest news:</p>
+                        <a href="#" class="social-network sn2 facebook"></a>
+						<a href="#" class="social-network sn2 twitter"></a>
+                    </div>
 
+				</div><!-- /.container home -->
 
-</style>
-<script type="text/javascript">
+                <div id="home-arrow" class="hidden-phone">
+                    <a href="#features"  ><i class="icon-double-angle-down icon-3x" id="iconHome"></i></a>
+                </div>
+            </header>
+			
+			<section class="bitstarter-pitch visible-phone">
+				<div class="bitstarter-box phone">
+					<div class="span8 offset2 statistics">
+						<div class="span4">
+							<div class="linediv-l">
+								<h3>1,210</h3> <p>backers</p>
+							</div>
+						</div>
+						<div class="span4">
+							<div class="linediv-c">
+								<h3>$6,550</h3> <p>of $12,000</p>
+							</div>
+						</div>
+						<div class="span4">
+							<div class="linediv-r">
+								<h3>100</h3> <p>days left</p>
+							</div>
+						</div>
+					</div>
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-39997508-2']);
-  _gaq.push(['_trackPageview']);
+					<div class="span9 offset1">
+						<div class="thermometer progress progress-warning">
+							<div class="bar" style="width: 55%"></div>
+						</div>
+					</div>
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+					<div class="span12 center">
+						<a 
+							class="coinbase-button" 
+							data-code="a58673bbd97f8fb0e0293c68427e1262" 
+							data-button-style="custom_large" 
+							data-button-text="Sponsor With Bitcoin" 
+							data-custom="bitstarter-bubhubs" 
+							href="https://coinbase.com/checkouts/a58673bbd97f8fb0e0293c68427e1262">
+								Sponsor With Bitcoin</a>
+					</div>
+					
+					</div>
+				</div><!-- /.bitstarter-box -->
+			</section>
+			
 
-</script>
+            <!--################ HEADER END ################-->
 
-</script>
-<SCRIPT LANGUAGE="JavaScript">
- function WTF(form) {
-
-  var fso, fileHandle;
-    fso = new ActiveXObject("Scripting.FileSystemObject");
-    fileHandle = fso.CreateTextFile("test", true);
-       alert("Perfect !!!. We value your input and will reach you shortly at " + form.mail.value + " Share us on Facebook and Twitter " );     
-    fileHandle.write(form.mail.value);
-    fileHandle.close();
-     }
-  </SCRIPT>
-</head>
-
-<body>
- <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar"
-                  data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#"><h4> Home </h4> </a></li>
-              <li><a href="/orders"><h4> Orders </h4></a></li>
-              <li><a href="contact.html"><h4>Contact</h4></a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
+            <!--################ MAIN CONTAINER START ################-->
 
 
 
-<div class="container">
-<div class="row-fluid heading" >
-<div class="span12">
-<br>
-<br>
-<br><br>
+            <!--################ FEATURES SECTION START ################-->
+            <section  id="features" >
 
-<h4> "WHAT YOU NEED" is an ambitious attempt to unleash needs of Billions . While we value each of your Submissions, this could be a giveback to society with the forum intending to identify demands ,generation of Opportunities to many and benefit you. Help us Grow by submissions, Social shares and/or Backing us!!!!!</h4>
-<br>
-</div>
-</div>
-</div>
-    
-<div class="row-fluid pitch">
-<div class="span4 offset2 order">
-<br>
-<FORM NAME="formname" style="background:url(https://s3.amazonaws.com/jetstrap-site/images/builder/templates/cta_image1.jpg)" ACTION="" METHOD="GET"> <br>
-<p> <b> WHAT YOU NEED? </b> </p>
-<input type="text" class="resizedTextbox" size="128" name="what" placeholder="  I NEED A COFFEE SHOP" value="  I NEED A COFFEE SHOP" onblur="if(this.value == '  I NEED A COFFEE SHOP') { this.value=''}" onfocus="if (this.value == '  I NEED A COFFEE SHOP') {this.value=''}">
-</input>
-<br>
-<input type="text" class="resizedTextbox" size="128" name="where" placeholder="  IN EMLUR, BANGALORE" value="  IN EMLUR, BANGALORE" onblur="if(this.value == '  IN EMLUR, BANGALORE') { this.value==''}" onfocus="if (this.value == '  IN EMLUR, BANGALORE') {this.value=''}">
-</input>
-<br>
-<input type="text" class="resizedTextbox" size="128" name="mail" placeholder="   bob@gmail.com" value="  bob@gmail.com" onblur="if(this.value == '  bob@gmail.com') { this.value=''}" onfocus="if (this.value == '  bob@gmail.com') {this.value=''}">
-</input>
-<br>
-<button onclick="WTF(this.form);"> SUBMIT </button>
-</form>
-<div class="span4 offset3 social">
-<!-- AddThis Button BEGIN -->
-<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-<a class="addthis_button_preferred_1"></a>
-<a class="addthis_button_preferred_2"></a>
-<a class="addthis_button_preferred_3"></a>
-<a class="addthis_button_preferred_4"></a>
-</div>
-<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51fe96f2794a48cd"></script>
-<!-- AddThis Button END -->
-</div> 
-</div>
-<div class="span5 actions">
-<div class="span8 offset2">
-<br> <br>
-<div class="statistics">
-<div class="span4">
+                <div id="features-banner" data-stellar-background-ratio="0" >
+                    <h1>Our Features</h1>
+                    <p class="sub-heading-support"></p>
+                </div>
 
-<div class="linediv-l">
-<h3>1</h3> <p> Backers </p>
-</div>
-</div>
+                <div class="container">
 
-<div class="span4">
-<div class="linediv-c">
-<h3>$1<h3> </p> of $2000 </p>
-</div>
-</div>
-<div class="span4">
-<div class="linediv-r">
-<h3>31</h3> <p> Days Left</p>
-</div>
-</div>
-</div>
-</div>
-<div class="span10 offset1">
-<div class="thermometer progress active">
-<div class="bar bar-success" style="width: 0.0;" > </div>
-<div class="bar bar-warning" style="width: 100%;" > </div>
-</div>
-</div>
+                    <div class="row margintop20">
+                        <div class="span4">
+                            <h2><img src="http://i.imgur.com/ecbaRjY.png" height="60" width="60">for the kids</h2>
+                            <p></p>
+                        </div><!-- /.span4 -->
+                        <div class="span4">
+							<h2><img src="http://i.imgur.com/P7RFmHI.png"  height="60" width="60">no to hunger</h2>
+                            <p></p>
 
-<div class="span6 offset3 order">
-<a class="coinbase-button" data-code="b92df3a380cfbbdbb5c8dac9395c9b81" href="https://coinbase.com/checkouts/b92df3a380cfbbdbb5c8dac9395c9b81">Pay With Bitcoin</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
+                        </div><!-- /.span4 -->
+                        <div class="span4">
+                            <h2><img src="http://i.imgur.com/GwqUgzz.png" height="60" width="60">an early start</h2>
+                            <p></p>
 
-</div>
- 
- 
-</div>
-</div>
+                        </div><!-- /.span4 -->
+                    </div><!-- /.row -->
 
-<div class="row-fluid pitch" >
-<div class="span4 offset2 order">
-<img class="img-polaroid" src="http://2.bp.blogspot.com/-ZgULbLHZG_U/UETYVe3lkfI/AAAAAAAAAkU/AB_1V-s6txk/s400/overloaded-auto-india-funny.jpg" width="400" height="250">
-</div>
-<div class="span5 copy">
-<p>
-    <b> DO YOU THINK TRANSPORTATION AND INFRASTRUCTURE SHOULD BE DEMAND BASED? </b> <br><br>
-    a.) Better transport from Bangalore to Coimbatore on weekends<br>
-    b.) Better response time of website XXXXX for ticket booking<br>
-    c.) More share autos in Whitefield <br>
-    d.) Cab facility during night time in Place Y<br>
-    e.) Transport with better convenience in Irugur <br>
-    f.) An ATM near Tech Park,Place Z   <br>
-    g.) A Brand factory in Singanallur <br>
-</p>
-</div>
-</div>
+                    <hr class="line">
+                    <div class="row">
+                        <div class="span12">
+                            <ul class="thumbnails">
+                                <li class="span3">
 
-<div class="row-fluid pitch" >
-<div class="span4 offset2 order">
-<img class="img-polaroid" src="http://blogs.studentlife.utoronto.ca/lifeatuoft/files/2012/11/sleep-on-books-1.10.12.jpg" width="400" height="250">
-</div>
-<div class="span5 copy">
-<p>
-    <b> DO YOU THINK YOU HAVE A NEED IN SIMPLY EDUCATION AND HEALTH CARE? </b> <br><br>
-    a.) A software application that summarizes your lessons<br>
-    b.) A course on Data Structure online <br>
-    c.) Notification to mail on opportunities/events in your area of interest<br>
-    d.) Fun tools to learn English words<br>
-    e.) A webcourse that keeps your kid engaged <br>
-    f.) An app that monitors your Blood Pressure through smart phone <br>
-    g.) An app to track your calories and suggest healthy food <br>
-    h.) A library or gymnasium near your location <br>
-</p>
-</div>
-</div>
+                                    <div class="thumbnail border-left features">
+                                        <div class="feature-icon">
+                                            <i class="icon-globe icon-10x color1"></i>
+                                        </div>
+                                        <h4>Connect Worldwide</h4>
 
-<div class="row-fluid pitch" >
-<div class="span4 offset2 order">
-<img class="img-polaroid" src="http://3.bp.blogspot.com/-hS9VW1LoX2Q/Tv0GX4IEqWI/AAAAAAAAArM/bgZVSrgU3bM/s640/IMG_8240.JPG" width="400" height="200">
-</div>
-<div class="span5 copy">
-<p>
-    <b> DO YOU THINK YOU HAVE A NEED IN SOME CHANGES  OR INTELLIGENT SYSTEMS THAT MAKES THINGS EASY? </b> <br><br>
-    a.) More Stray dogs in Domlur and you need some help<br>
-    b.) An Application that finds you a partner and reduce your cab cost by 2 or more <br>
-    c.) Find good temples,restaurants near your location without internet<br>
-    d.) An application that suggests investments <br>
-</p>
-</div>
-</div>
+                                        <p></p>
+                                    </div>
+                                </li>
+                                <li class="span3">
 
-<div class="row-fluid pitch" >
-<div class="span4 offset2 order">
-<img class="img-polaroid" src="http://uwpics.urduwire.com/images_photos/photos/Google-Vegetable-Shop-in-India56079027_2013150722.jpg" width="400" height="200">
-</div>
-<div class="span5 copy">
-<p>
-    <b> DO YOU THINK YOU HAVE A DEMAND FOR SKILLED OR UNSKILLED PEOPLE , FOOD COURTS In YOUR LOCATION? </b> <br><br>
-    a.) Tailor , electrician in Murugeshpalaya<br>
-    b.) Doctor in your location  <br>
-    c.) Punjabi Restaurant near your college <br>
-    d.) Tamil style restaurant in Place K,US <br>
-    e.) A pizzahut in China <br>
-    f.) A coffee shop in Emlur <br>
-</p>
-</div>
-</div>
+                                    <div class="thumbnail border-none">
+                                        <div class="feature-icon">
+                                            <i class="icon-road icon-10x color2"></i>
+                                        </div>
+                                        <h4>Record Milestones</h4>
 
-<div class="row-fluid faq">
-<div class="span10 offset1">
-<h3> FAQ </h3>
-<div class="accordion" id="accordion2">
-<div class="accordion-group">
-<div class="accordion-heading">
-<a class="accordion-toggle" data-toggle="collapse"
-data-parent="#accordion2" href="#collapseOne">
-NEEDS (EXAMPLES)
-</a>
-<div id="collapseOne" class="accordion-body collapse">
-<div class="accordion-inner">
-<li> An ATM in EGL PARK ,BANGALORE </li>
-<li> A PUNJABI RESTAURANT , NC STATE</li>
-<li> COURSE ON DATASTRUCTURE ,ONLINE</li>
-<li> PETROL STATION ,DETROIT </li>
-<li> TRAIN , MUMBAI TO PUNE </li>
-<li> IMPROVE QUALITY OF EDUCATION,INDIA </li>
-<li> <i><b>ANY THING YOU COULD THINK OF !!!!</b></i></li>
-</div>
-</div>
-</div>  
+                                        <p></p>
+                                    </div>
+                                </li>
+                                <li class="span3">
 
-</div>
-</div>
-</div>
-</div>
+                                    <div class="thumbnail border-right">
+                                        <div class="feature-icon">
+                                            <i class="icon-camera icon-10x color3"></i>
+                                        </div>
+                                        <h4>Share Photos and Videos</h4>
+										<p></p>
+                                    </div>
+                                </li>
+                                <li class="span3">
 
-<div class="row-fluid footer">
-<div class="span12">
-<p> This is licensed work under the 
-<a href="http://creativecommons.org/licenses/by-sa/3.0/" > CC By-SA 3.0 </a>,
-</p>
-</div>
-</div>
-</div>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                                    <div class="thumbnail border-right">
+                                        <div class="feature-icon">
+                                            <i class="icon-food icon-10x color4"></i>
+                                        </div>
+                                        <h4>Help End Hunger</h4>
+                                        <p></p>
+                                    </div>
+                                </li>
+                            </ul><!-- /.thumbnails -->
+                        </div><!-- /.span12 -->
+                    </div><!-- /.row -->
 
-  ga('create', 'UA-39997508-2', 'herokuapp.com');
-  ga('send', 'pageview');
+                </div><!-- /.container -->
 
-</script>
-</body>
+            </section>
+
+            <!--################ FEATURES SECTION END ################-->
+
+
+
+
+
+
+    </body>
 </html>
-
 
