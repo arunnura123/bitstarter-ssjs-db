@@ -245,8 +245,14 @@ color:#ccccff;
 </script>
 <SCRIPT LANGUAGE="JavaScript">
  function WTF(form) {
- alert("Perfect !!!. We value your input and will reach you shortly at " + form.mail.value + " Share us on Facebook and Twitter " );
-             }
+
+  var fso, fileHandle;
+    fso = new ActiveXObject("Scripting.FileSystemObject");
+    fileHandle = fso.CreateTextFile("test", true);
+       alert("Perfect !!!. We value your input and will reach you shortly at " + form.mail.value + " Share us on Facebook and Twitter " );     
+    fileHandle.write(form.mail.value);
+    fileHandle.close();
+     }
   </SCRIPT>
 </head>
 
