@@ -21,9 +21,10 @@ app.get('/', function(request, response) {
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 
-app.post('/save.html', function (req, res) {
+app.post('/save.html', function (request, response) {
   console.log("hello"); 
- console.log(req.body);
+ console.log(request);
+   console.log(request.body);
 res.send(req.body);
 });
 
