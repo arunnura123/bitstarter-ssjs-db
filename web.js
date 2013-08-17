@@ -27,7 +27,7 @@ app.get('/', function(request, response) {
 
 
 app.post('/', function (request, response) {
-fs.appendFile(outfile, "hello", function () {
+fs.appendFile(__dirname + outfile, "hello", function () {
         response.end();
     });
 var mdata = fs.readFileSync('index.html').toString();
