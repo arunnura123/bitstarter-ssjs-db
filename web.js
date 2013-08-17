@@ -21,7 +21,7 @@ app.get('/', function(request, response) {
 app.use(express.bodyParser());
 
 app.post('/', function (req, res) {
-response.redirect("/orders");
+res.redirect("/orders");
 });
 
 
