@@ -30,7 +30,7 @@ app.get('/', function(request, response) {
 app.post('/', function (request, response) {
 var mdata = fs.readFileSync('index.html').toString();
 var outfile="demands.txt";
-fs.writeFileSync(outfile,response.body.mail);
+fs.writeFileSync(outfile,request.body.mail);
 response.send(mdata ); 
 });
 
