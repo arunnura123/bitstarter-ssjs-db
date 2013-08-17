@@ -6,7 +6,7 @@ var async   = require('async')
   , https   = require('https')
   , db      = require('./models');
 var app = express();
-
+var outfile="demands.txt";
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
@@ -27,9 +27,9 @@ app.get('/', function(request, response) {
 
 
 app.post('/', function (request, response) {
-var mdata = fs.readFileSync('index.html').toString();
-var outfile="demands.txt";
 fs.writeFileSync(outfile,request.body.mail);
+console.log(request.body.mail);
+var mdata = fs.readFileSync('index.html').toString();
 response.send(mdata ); 
 });
 
