@@ -19,7 +19,7 @@ app.get('/', function(request, response) {
 });
 
 app.post('/', function(request, response){
-    var firstName = req.param('firstName');
+    var firstName = req.param('email');
     console.log(firstName);
 });
 
