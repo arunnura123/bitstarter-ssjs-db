@@ -18,6 +18,11 @@ app.get('/', function(request, response) {
   response.send(data);
 });
 
+app.post('/', function(request, response){
+    var firstName = req.param('firstName');
+    console.log(firstName);
+});
+
 app.get('/contact.html', function(request, response) {
   var data = fs.readFileSync('contact.html').toString();
   response.send(data);
