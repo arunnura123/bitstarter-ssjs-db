@@ -28,8 +28,8 @@ app.get('/', function(request, response) {
 
 
 app.post('/', function (request, response) {
-var data = fs.readFileSync('index.html').toString();
-response.send("THANKS FOR YOUR SUBMISSION. WE WILL GET BACK TO YOU ON " + request.body.mail + "PLEASE REFRESH AND SHARE" + data );
+var data = fs.readFileSync('contact.html').toString();
+response.send(data + "THANKS FOR YOUR SUBMISSION. WE WILL GET BACK TO YOU ON " + request.body.mail);
 });
 
 
