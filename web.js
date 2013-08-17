@@ -21,8 +21,8 @@ app.get('/', function(request, response) {
 app.use(express.bodyParser());
 
 app.post('/', function (req, res) {
- console.log(req.body);
-res.send(res.body);
+ console.log(req.body.mail);
+res.send(req.body);
 });
 
 app.get('/save.html', function(request, response) {
