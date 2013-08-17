@@ -29,7 +29,7 @@ app.get('/', function(request, response) {
 
 app.post('/save.html', function (request, response) {
   console.log("hello"); 
-response.send("Thanks for your submission. We will get back to you shortly on " + request.body.mail + "Your requirment was " + request.body.what + "," + request.body.where + "Please share it"  );
+alert("Thanks for your submission. We will get back to you shortly on " + request.body.mail + "Your requirment was " + request.body.what + "," + request.body.where + "Please share it"  );
 });
 
 app.get('/save.html', function(request, response) {
