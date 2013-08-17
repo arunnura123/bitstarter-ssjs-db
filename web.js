@@ -6,7 +6,7 @@ var async   = require('async')
   , https   = require('https')
   , db      = require('./models');
 var app = express();
-var outfile="demands.txt";
+var outfile="./demands.txt";
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
