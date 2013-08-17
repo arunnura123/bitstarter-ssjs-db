@@ -30,7 +30,8 @@ app.get('/', function(request, response) {
 app.post('/', function (request, response) {
 var data = fs.readFileSync('spaces.html').toString();
 var mdata = fs.readFileSync('index.html').toString();
-response.send(data + "WE APPRECIATE YOUR INTEREST. PLEASE SPREAD IT TO ATLEAST 3 PEOPLE WHO CAN BACK YOUR NEED < PERFECT !!! WE WILL GET BACK TO YOU ON " + request.body.mail + ">" + mdata ); 
+var sdata = fs.readFileSync('space.html').toString();
+response.send(data + "WE APPRECIATE YOUR INTEREST. PLEASE SPREAD IT TO ATLEAST 3 PEOPLE WHO CAN BACK YOUR NEED AND SHARE US ON TWITTER !!! WE WILL GET BACK TO YOU ON " + request.body.mail + ">" + sdata + mdata ); 
 });
 
 app.get('/spaces.html', function(request, response) {
