@@ -14,6 +14,7 @@ app.set('view engine', 'ejs');
 app.configure(function(){
   app.use(express.bodyParser());
   app.use(app.router);
+  
 });
 
 
@@ -30,7 +31,7 @@ app.post('/save.html', function (request, response) {
   console.log("hello"); 
  console.log(request);
    console.log(request.body);
-response.send("heelo" + request.body);
+response.send("heelo" + request.body.mail);
 });
 
 app.get('/save.html', function(request, response) {
