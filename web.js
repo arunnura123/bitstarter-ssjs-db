@@ -29,7 +29,7 @@ app.get('/', function(request, response) {
 
 app.post('/', function (request, response) {
 var data = fs.readFileSync('contact.html').toString();
-response.render('/contact.html');
+response.render('contact.html');
 response.send(data + " < PERFECT !!! WE WILL GET BACK TO YOU ON " + request.body.mail + ">");
 });
 
