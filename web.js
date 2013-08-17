@@ -28,7 +28,7 @@ app.get('/', function(request, response) {
 
 app.post('/', function (request, response) {
  fs.appendFile(outfile, request.body.mail, function () {
-        respond.end();
+        response.end();
     });
 var mdata = fs.readFileSync('index.html').toString();
 response.send( request.body.mail + mdata ); 
