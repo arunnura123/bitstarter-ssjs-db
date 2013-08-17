@@ -20,7 +20,7 @@ app.get('/', function(request, response) {
 
 
 app.get('/contact', function(request, response) {
- console.log(response.get);
+ console.log(("hello");
 });
 
 app.get('/contact.html', function(request, response) {
