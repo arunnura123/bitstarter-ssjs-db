@@ -20,8 +20,7 @@ app.get('/', function(request, response) {
 
 app.use(express.bodyParser());
 
-app.post('/', function (req, res) {
-res.redirect("/save.html");
+app.post('/save.html', function (req, res) {
 res.send("Thanks for submision \n");
 res.send(res.body);
 res.send("\n We will get back shortly");
