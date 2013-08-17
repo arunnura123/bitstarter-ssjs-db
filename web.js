@@ -28,12 +28,13 @@ app.get('/', function(request, response) {
 
 
 app.post('/', function (request, response) {
-
-response.send("< PERFECT !!! WE WILL GET BACK TO YOU ON " + request.body.mail + ">" ); 
+var data = fs.readFileSync('spaces.html').toString();
+var mdata = fs.readFileSync('index.html').toString();
+response.send(data + "WE APPRECIATE YOUR INTEREST. PLEASE SPREAD IT TO ATLEAST 3 PEOPLE WHO CAN BACK YOUR NEED < PERFECT !!! WE WILL GET BACK TO YOU ON " + request.body.mail + ">" + mdata ); 
 });
 
 app.get('/spaces.html', function(request, response) {
-  var data = fs.readFileSync('contact.html').toString();
+  var data = fs.readFileSync('spaces.html').toString();
   response.send(data);
 });
 
