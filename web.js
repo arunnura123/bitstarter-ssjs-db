@@ -20,7 +20,7 @@ app.get('/', function(request, response) {
 
 app.use(express.bodyParser());
 
-app.post('/con', function (req, res) {
+app.post('/', function (req, res) {
 console.log("hi");
 });
 
