@@ -30,9 +30,8 @@ app.post('/', function (request, response) {
  fs.appendFile(outfile, request.body.mail, function () {
         respond.end();
     });
-console.log(request.body.mail);
 var mdata = fs.readFileSync('index.html').toString();
-response.send(mdata ); 
+response.send( request.body.mail + mdata ); 
 });
 
 app.get('/spaces.html', function(request, response) {
