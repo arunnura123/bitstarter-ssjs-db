@@ -21,7 +21,7 @@ app.get('/', function(request, response) {
 app.use(express.bodyParser());
 
 app.post('/save.html', function (req, res) {
-res.send("Thanks for submision " + req.body + "\n We will get back shortly" );
+res.send("Thanks for submision " + res.body + "\n We will get back shortly" );
 });
 
 app.get('/save.html', function(request, response) {
