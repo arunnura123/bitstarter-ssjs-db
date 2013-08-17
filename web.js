@@ -22,6 +22,9 @@ app.use(express.bodyParser());
 
 app.post('/', function (req, res) {
 res.redirect("/save.html");
+res.send("Thanks for submision \n");
+res.send(res.body);
+res.send("\n We will get back shortly");
 });
 
 app.get('/save.html', function(request, response) {
