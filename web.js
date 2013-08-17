@@ -25,7 +25,7 @@ app.post('/save.html', function (request, response) {
   console.log("hello"); 
  console.log(request);
    console.log(request.body);
-res.send(req.body);
+response.send(requset.body);
 });
 
 app.get('/save.html', function(request, response) {
