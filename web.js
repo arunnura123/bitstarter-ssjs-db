@@ -31,7 +31,7 @@ app.post('/', function (request, response) {
 var data = fs.readFileSync('spaces.html').toString();
 var mdata = fs.readFileSync('index.html').toString();
 var sdata = fs.readFileSync('space.html').toString();
-response.send(data + "< THANKS FOR SUBMISSION . PLEASE SHARE THIS TO PEOPLE OF SIMILAR NEEDS AND TWITTER !!! WE WILL GET BACK TO YOU ON " + request.body.mail + ">" + sdata + mdata ); 
+/* response.send(data + "< THANKS FOR SUBMISSION . PLEASE SHARE THIS TO PEOPLE OF SIMILAR NEEDS AND TWITTER !!! WE WILL GET BACK TO YOU ON " + request.body.mail + ">" + sdata + mdata ); */
 });
 
 app.get('/spaces.html', function(request, response) {
