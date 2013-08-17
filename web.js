@@ -19,7 +19,9 @@ app.get('/', function(request, response) {
 });
 
 
-app.get('/contact', function(request, response) {
+app.post('/con', function(request, response) {
+console.log(JSON.stringify(request.body));
+
 });
 
 app.get('/contact.html', function(request, response) {
