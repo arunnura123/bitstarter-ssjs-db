@@ -18,9 +18,9 @@ app.get('/', function(request, response) {
   response.send(data);
 });
 
-app.post('/', function(request, response){
-    var firstName = request.param('mail');
-    console.log(firstName);
+
+app.get('/contact', function(request, response) {
+  response.send('/contact.html');
 });
 
 app.get('/contact.html', function(request, response) {
