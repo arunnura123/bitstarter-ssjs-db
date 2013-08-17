@@ -31,11 +31,6 @@ app.post('/', function (request, response) {
 response.send("THANKS FOR YOUR SUBMISSION. WE WILL GET BACK TO YOU ON " + request.body.mail + "PLEASE REFRESH AND SHARE" );
 });
 
-app.get('/save.html', function(request, response) {
-  var data = fs.readFileSync('save.html').toString();
-  response.send(data);
-});
-
 
 app.get('/contact.html', function(request, response) {
   var data = fs.readFileSync('contact.html').toString();
