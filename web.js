@@ -21,6 +21,7 @@ app.get('/', function(request, response) {
 app.use(express.bodyParser());
 
 app.post('/', function (req, res) {
+ console.log(req.body);
 res.send(res.body);
 });
 
