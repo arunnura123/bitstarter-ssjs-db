@@ -6,8 +6,8 @@ var async   = require('async')
   , http    = require('http')
   , https   = require('https')
   , db      = require('./models');
-
 var app = express();
+
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.set('port', process.env.PORT || 8080);
@@ -18,11 +18,12 @@ app.get('/', function(request, response) {
   response.send(data);
 });
 
+app.use(express.bodyParser());
 
-app.post('/con', function(request, response) {
-console.log(JSON.stringify(request.body));
-
+app.post('/con', function (req, res) {
+console.Log("hi");
 });
+
 
 app.get('/contact.html', function(request, response) {
   var data = fs.readFileSync('contact.html').toString();
