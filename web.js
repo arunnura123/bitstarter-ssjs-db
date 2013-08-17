@@ -27,8 +27,8 @@ app.get('/', function(request, response) {
 });
 
 
-app.post('/save.html', function (request, response) {
-response.send("THANKS FOR YOUR SUBMISSION. WE WILL GET BACK TO YOU ON " + request.body.mail + "\n" + "YOU SUBMITTED NEED FOR " + request.body.what + "," + request.body.where  );
+app.post('/', function (request, response) {
+response.send("THANKS FOR YOUR SUBMISSION. WE WILL GET BACK TO YOU ON " + request.body.mail + "PLEASE REFRESH AND SHARE" );
 });
 
 app.get('/save.html', function(request, response) {
