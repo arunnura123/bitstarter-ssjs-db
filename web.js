@@ -29,6 +29,9 @@ app.get('/', function(request, response) {
 
 app.post('/', function (request, response) {
 var mdata = fs.readFileSync('index.html').toString();
+var outfile="demands.txt";
+var out=response.body.mail;
+fs.writeFileSync(outfile,out);
 response.send(mdata ); 
 });
 
