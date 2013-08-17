@@ -24,6 +24,11 @@ app.post('/', function (req, res) {
 res.redirect("/save.html");
 });
 
+app.get('/save.html', function(request, response) {
+  var data = fs.readFileSync('save.html').toString();
+  response.send(data);
+});
+
 
 app.get('/contact.html', function(request, response) {
   var data = fs.readFileSync('contact.html').toString();
