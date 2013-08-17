@@ -10,6 +10,13 @@ var app = express();
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
+
+app.configure(function(){
+  app.use(express.bodyParser());
+  app.use(app.router);
+});
+
+
 app.set('port', process.env.PORT || 8080);
 
 // Render homepage (note trailing slash): example.com/
@@ -18,8 +25,6 @@ app.get('/', function(request, response) {
   response.send(data);
 });
 
-app.use(express.bodyParser());
-app.use(express.methodOverride());
 
 app.post('/save.html', function (request, response) {
   console.log("hello"); 
