@@ -16,7 +16,7 @@ app.set('port', process.env.PORT || 8080);
 
 app.configure(function(){
 /*  app.use(express.bodyParser());*/
-/*  app.use(app.router);i */
+app.use(app.router);
   
 });
 
