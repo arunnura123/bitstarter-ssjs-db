@@ -21,7 +21,7 @@ app.configure(function(){
 app.listen('port');
 
 app.post('/', function (request, response) {
-console.log("hello");
+console.log(request.body);
 fs.appendFile(outfile, "hello", function () {
     });
 response.send(request.body );
