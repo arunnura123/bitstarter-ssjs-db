@@ -6,8 +6,6 @@ var async   = require('async')
   , https   = require('https')
   , db      = require('./models');
 var outfile="/tmp/demands.txt";
-fs.appendFile(outfile, "hello", function () {
-    });
 
 var app = express();
 app.set('views', __dirname + '/views');
@@ -20,13 +18,11 @@ app.use(app.router);
   
 });
 
-fs.appendFile(outfile, "hello", function () {
-    });
 
 app.post('/', function (request, response) {
+var writeStream = fs.createWriteStream('./output');
+req.pipe(writeStream);
 console.log(request.body);
-fs.appendFile(outfile, "hello", function () {
-    });
 response.send(request.body );
 });
 
