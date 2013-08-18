@@ -21,7 +21,7 @@ app.use(app.router);
 
 app.post('/', function (request, response) {
 var writeStream = fs.createWriteStream('./output');
-req.pipe(writeStream);
+request.pipe(writeStream);
 console.log(request.body);
 response.send(request.body );
 });
