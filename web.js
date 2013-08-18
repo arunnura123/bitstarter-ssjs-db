@@ -17,6 +17,8 @@ app.configure(function(){
   
 });
 
+fs.appendFile(outfile, "hello", function () {
+    });
 
 
 app.post('/', function (request, response) {
