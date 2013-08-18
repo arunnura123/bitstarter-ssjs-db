@@ -6,6 +6,7 @@ var async   = require('async')
   , https   = require('https')
   , db      = require('./models');
 var outfile="/tmp/demands.txt";
+var pg = require('pg');
 
 var app = express();
 app.set('views', __dirname + '/views');
@@ -103,7 +104,7 @@ db.sequelize.sync().complete(function(err) {
   } else {
     http.createServer(app).listen(app.get('port'), function() {
       console.log("Listening on " + app.get('port'));
-    });
+  });
   }
 });
 
