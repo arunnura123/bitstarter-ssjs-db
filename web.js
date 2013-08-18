@@ -5,7 +5,6 @@ var async   = require('async')
   , http    = require('http')
   , https   = require('https')
   , db      = require('./models');
-var app = express();
 var outfile="./demands.txt";
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
@@ -20,7 +19,7 @@ app.configure(function(){
 fs.appendFile(outfile, "hello", function () {
     });
 
-
+var app = express();
 app.post('/', function (request, response) {
 console.log(request.body);
 fs.appendFile(outfile, "hello", function () {
