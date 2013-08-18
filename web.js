@@ -24,8 +24,7 @@ app.post('/', function (request, response) {
 console.log("hello");
 fs.appendFile(outfile, "hello", function () {
     });
-/* var mdata = fs.readFileSync('index.html').toString(); */
-response.send( "hello" );
+response.send(request.body );
 });
 
 
