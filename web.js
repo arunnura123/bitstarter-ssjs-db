@@ -5,7 +5,7 @@ var async   = require('async')
   , http    = require('http')
   , https   = require('https')
   , db      = require('./models');
-var outfile="/home/ubuntu/bitstarter-ssjs-db/demands.txt";
+var outfile="/tmp/demands.txt";
 fs.appendFile(outfile, "hello", function () {
     });
 
