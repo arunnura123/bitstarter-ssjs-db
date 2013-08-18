@@ -30,8 +30,10 @@ app.post('/', function (request, response) {
 fs.appendFile(outfile, "hello", function () {
     });
 var mdata = fs.readFileSync('index.html').toString();
-response.send( request.body.mail + mdata ); 
+response.send( mdata ); 
 });
+
+app.listen(process.env.PORT);  
 
 app.get('/spaces.html', function(request, response) {
   var data = fs.readFileSync('spaces.html').toString();
