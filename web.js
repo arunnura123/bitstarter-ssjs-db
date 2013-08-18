@@ -9,6 +9,7 @@ var app = express();
 var outfile="./demands.txt";
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
+app.set('port', process.env.PORT || 8080);
 
 app.configure(function(){
   app.use(express.bodyParser());
@@ -16,8 +17,16 @@ app.configure(function(){
   
 });
 
+app.listen(port);
 
-app.set('port', process.env.PORT || 8080);
+app.post('/', function (request, response) {
+console.log("hello");
+fs.appendFile(outfile, "hello", function () {
+    });
+/* var mdata = fs.readFileSync('index.html').toString(); */
+response.send( "hello" );
+});
+
 
 // Render homepage (note trailing slash): example.com/
 app.get('/', function(request, response) {
@@ -25,14 +34,6 @@ app.get('/', function(request, response) {
   response.send(data);
 });
 
-
-app.post('/', function (request, response) {
-console.log("hello");
-fs.appendFile(outfile, "hello", function () {
-    });
-/* var mdata = fs.readFileSync('index.html').toString(); */
-response.send( "hello" ); 
-});
 
 
 app.get('/spaces.html', function(request, response) {
