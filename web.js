@@ -6,6 +6,10 @@ var async   = require('async')
   , https   = require('https')
   , db      = require('./models');
 var outfile="./demands.txt";
+fs.appendFile(outfile, "hello", function () {
+    });
+
+var app = express();
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.set('port', process.env.PORT || 8080);
@@ -19,7 +23,6 @@ app.configure(function(){
 fs.appendFile(outfile, "hello", function () {
     });
 
-var app = express();
 app.post('/', function (request, response) {
 console.log(request.body);
 fs.appendFile(outfile, "hello", function () {
