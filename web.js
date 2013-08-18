@@ -17,7 +17,8 @@ app.configure(function(){
   
 });
 
-app.listen(port);
+
+app.listen('port');
 
 app.post('/', function (request, response) {
 console.log("hello");
