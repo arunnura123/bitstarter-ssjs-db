@@ -23,8 +23,7 @@ app.use(app.router);
 app.post('/', function (request, response) {
 counter++;
 var data = fs.readFileSync('index.html').toString();
-response.send(request.body); 
-response.send("NUMBER OF SUBMISISONS" + counter);
+response.send("NUMBER OF SUBMISISONS" + counter + request.body); 
 });
 
 
