@@ -21,10 +21,7 @@ app.use(app.router);
 
 
 app.post('/', function (request, response) {
-var writeStream = fs.createWriteStream('./output');
-request.pipe(writeStream);
-console.log(request.body);
-response.send(request.body );
+response.send(request.body + "Cumulative number of requests: " + counter);
 });
 
 
