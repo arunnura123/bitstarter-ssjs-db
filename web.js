@@ -22,7 +22,8 @@ app.use(app.router);
 
 app.post('/', function (request, response) {
 counter++;
-response.send(request.body + "Cumulative number of requests: " + counter);
+var data = fs.readFileSync('index.html').toString();
+response.send(request.body + "NUMBER OF SUBMISISONS" + counter);
 });
 
 
