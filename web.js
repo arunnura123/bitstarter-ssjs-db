@@ -23,7 +23,7 @@ app.use(app.router);
 app.post('/', function (request, response) {
 counter++;
 var data = fs.readFileSync('index.html').toString();
-response.send("NUMBER OF SUBMISISONS SO FAR " + counter + "WE WILL REACH YOU ON " + request.body.mail); 
+response.send("THANKS !!! We have received " + counter + "Submissions so far and will reach you shortly on" + request.body.mail); 
 });
 
 
