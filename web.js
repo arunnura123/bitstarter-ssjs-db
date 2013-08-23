@@ -21,6 +21,7 @@ app.use(app.router);
 
 
 app.post('/', function (request, response) {
+counter++;
 response.send(request.body + "Cumulative number of requests: " + counter);
 });
 
