@@ -9,6 +9,7 @@ var outfile="/tmp/demands.txt";
 var pg = require('pg');
 var counter=0;
 var app = express();
+
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.set('port', process.env.PORT || 8080);
@@ -23,6 +24,14 @@ app.use(app.router);
 app.post('/', function (request, response) {
 counter++;
 var data = fs.readFileSync('index.html').toString();
+pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+  client.query('SELECT * FROM phonebook', function(err, result) {
+    done();
+    if(err) return console.error(err);
+    console.log(result.rows);
+    response.send(result.rows);
+  });
+});
 response.send("THANKS !!! We have received " + counter + " Submissions so far and will reach you shortly on" + request.body.mail); 
 });
 
