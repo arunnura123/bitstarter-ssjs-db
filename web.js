@@ -7,7 +7,7 @@ var async   = require('async')
   , db      = require('./models');
 var outfile="/tmp/demands.txt";
 var pg = require('pg');
-
+var counter=0;
 var app = express();
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
@@ -31,7 +31,7 @@ response.send(request.body );
 // Render homepage (note trailing slash): example.com/
 app.get('/', function(request, response) {
   var data = fs.readFileSync('index.html').toString();
-  response.send(data);
+  response.send(data + "Cumulative number of requests: " + counter );
 });
 
 
@@ -103,6 +103,7 @@ db.sequelize.sync().complete(function(err) {
     throw err;
   } else {
     http.createServer(app).listen(app.get('port'), function() {
+    counter+=1;  
       console.log("Listening on " + app.get('port'));
   });
   }
