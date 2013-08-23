@@ -24,6 +24,7 @@ app.use(app.router);
 app.post('/', function (request, response) {
 counter++;
 var data = fs.readFileSync('index.html').toString();
+console.log(process.env.DATABASE_URL);
 pg.connect("postgres://deuxflzernaobs:rTdgZp18soaBHIiBd3oDCRlO1B@ec2-54-227-238-25.compute-1.amazonaws.com:5432/d8e4o2feqt3odo", function(err, client, done) {
   client.query('SELECT * FROM phonebook', function(err, result) {
     done();
