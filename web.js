@@ -36,7 +36,6 @@ pg.connect(conf, function(err, client, done) {
 // Render homepage (note trailing slash): example.com/
 app.get('/', function(request, response) {
   var data = fs.readFileSync('index.html').toString();
-  response.send(data + "Cumulative number of requests: " + counter );
 });
 
 
