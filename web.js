@@ -22,15 +22,14 @@ app.use(app.router);
 
 
 app.post('/', function (request, response) {
-console.log(process.env);
-pg.connect("postgres://deuxflzernaobs:rTdgZp18soaBHIiBd3oDCRlO1B@ec2-54-227-238-25.compute-1.amazonaws.com:5432/d8e4o2feqt3odo", function(err, client, done) {
+pg.connect('postgres://ubuntu:bitpass0@localhost/bitdb0', function(err, client, done) {
+if(err) return console.error(err);
   client.query('SELECT * FROM phonebook', function(err, result) {
     done();
     if(err) return console.error(err);
-    console.log(result.rows);
+   response.send (result.rows);
   });
 });
-response.send("THANKS !!! We have received " + counter + " Submissions so far and will reach you shortly on" + request.body.mail); 
 });
 
 
