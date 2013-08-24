@@ -22,7 +22,7 @@ app.use(app.router);
 
 
 app.post('/', function (request, response) {
-pg.connect('postgres://ubuntu:bitpass0@localhost/bitdb0', function(err, client, done) {
+pg.connect('postgres://ubuntu:bitpass0@localhost:5432/bitdb0', function(err, client, done) {
 if(err) return console.error(err);
   client.query('SELECT * FROM phonebook', function(err, result) {
     done();
