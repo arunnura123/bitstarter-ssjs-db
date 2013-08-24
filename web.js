@@ -30,7 +30,6 @@ pg.connect(conf, function(err, client, done) {
   response.send (result.rows); 
   }); 
 });
-response.send(result.rows); 
 });
 
 
