@@ -9,7 +9,7 @@ var outfile="/tmp/demands.txt";
 var pg = require('pg');
 var counter=0;
 var app = express();
-
+var conf=process.env.DATABASE_URL || 'postgres://ubuntu:bitpass0@localhost:5432/bitdb0';
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.set('port', process.env.PORT || 8080);
@@ -22,7 +22,7 @@ app.use(app.router);
 
 
 app.post('/', function (request, response) {
-pg.connect('postgres://ubuntu:bitpass0@localhost:5432/bitdb0', function(err, client, done) {
+pg.connect(conf, function(err, client, done) {
 if(err) return console.error(err);
   client.query('SELECT * FROM phonebook', function(err, result) {
     done();
