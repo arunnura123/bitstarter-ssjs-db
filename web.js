@@ -33,7 +33,7 @@ app.post('/', function (request, response) {
     if(err) return console.error(err);
   });
 });     
-  response.send(wstring);
+  response.send(wString);
 });
 
 
