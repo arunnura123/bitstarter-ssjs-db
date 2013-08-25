@@ -22,6 +22,11 @@ app.use(app.router);
 
 
 app.post('/', function (request, response) {
+ var data = fs.readFileSync('/').toString();
+  response.send(data);
+}
+
+app.get('/Info.html', function (request, response) {
 pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
   client.query('SELECT * FROM phonebook', function(err, result) {
