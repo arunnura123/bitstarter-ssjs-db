@@ -25,7 +25,7 @@ app.post('/', function (request, response) {
  var data = fs.readFileSync('index.html').toString();
  pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
-  client.query('INSERT INTO whatuneed(need,location, contact) VALUES(request.what,request.where,request.mail)', function(err, result) {
+  client.query('INSERT INTO whatuneed(need,location,mail) VALUES(request.what,request.where,request.mail)', function(err, result) {
   console.log(request.what);
     done();
     if(err) return console.error(err);
