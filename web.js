@@ -23,6 +23,14 @@ app.use(app.router);
 
 app.post('/', function (request, response) {
  var data = fs.readFileSync('index.html').toString();
+ pg.connect(conf, function(err, client, done) {
+ if(err) return console.error(err);
+  client.query('INSERT INTO whatuneed(need,location, contact) VALUES(form.what,form.where,form.mail)', function(err, result) {
+    done();
+    if(err) return console.error(err);
+  response.send (result.rows);
+  });
+});     
   response.send(data);
 });
 
@@ -30,7 +38,7 @@ app.post('/', function (request, response) {
 app.get('/Info.html', function (request, response) {
 pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
-  client.query('SELECT * FROM phonebook', function(err, result) {
+  client.query('SELECT * FROM whatuneed', function(err, result) {
     done();
     if(err) return console.error(err);
   response.send (result.rows); 
