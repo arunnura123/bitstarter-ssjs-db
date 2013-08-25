@@ -22,7 +22,7 @@ app.use(app.router);
 
 
 app.post('/', function (request, response) {
- var data = fs.readFileSync('/').toString();
+ var data = fs.readFileSync('/index.html').toString();
   response.send(data);
 });
 
