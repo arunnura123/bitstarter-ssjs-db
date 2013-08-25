@@ -26,10 +26,8 @@ app.post('/', function (request, response) {
  pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
   client.query('INSERT INTO whatuneed(need,location,mail) VALUES(request.what,request.where,request.mail)', function(err, result) {
-  console.log(request.what);
     done();
     if(err) return console.error(err);
-  response.send (result.rows);
   });
 });     
   response.send(data);
