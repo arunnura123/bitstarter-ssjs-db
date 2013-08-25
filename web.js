@@ -28,7 +28,7 @@ app.post('/', function (request, response) {
  var mStrin  = "'"+ request.body.mail.replace(/ /g, "_")+"'"; 
  pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
-  client.query("INSERT INTO whatuneed (need,location,mail) VALUES (':wStrin',':hStrin',':mStrin') ", function(err, result) {
+  client.query("INSERT INTO whatuneed (need,location,mail) VALUES (:wStrin,:hStrin,:mStrin) ", function(err, result) {
     done();
     if(err) return console.error(err);
   });
