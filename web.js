@@ -41,7 +41,7 @@ pg.connect(conf, function(err, client, done) {
 
 // Render homepage (note trailing slash): example.com/
 
-app.get('Preoder.html', function(request, response) {
+app.get('/Preoder.html', function(request, response) {
   var data = fs.readFileSync('Preoder.html').toString();
   response.send(data);
 });
