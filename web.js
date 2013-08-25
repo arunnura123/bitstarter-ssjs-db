@@ -48,8 +48,8 @@ app.get('/', function(request, response) {
 
 
 
-app.get('/spaces.html', function(request, response) {
-  var data = fs.readFileSync('spaces.html').toString();
+app.get('/Visuals.html', function(request, response) {
+  var data = fs.readFileSync('Visuals.html').toString();
   response.send(data);
 });
 
