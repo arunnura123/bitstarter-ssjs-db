@@ -23,12 +23,12 @@ app.use(app.router);
 
 app.post('/', function (request, response) {
  var data = fs.readFileSync('index.html').toString();
- var wStrin = "'"+ request.body.what.replace(/ /g, "_")+"'";
- var hStrin = "'"+ request.body.where.replace(/ /g, "_")+"'";
- var mStrin = "'"+ request.body.mail.replace(/ /g, "_")+"'"; 
+ var wStrin = request.body.what.replace(/ /g, "_");
+ var hStrin =  request.body.where.replace(/ /g, "_");
+ var mStrin =  request.body.mail.replace(/ /g, "_"); 
  pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
-  client.query("INSERT INTO whatuneed(need,location,mail) VALUES(wStrin,hStrin,mStrin)", function(err, result) {
+  client.query("INSERT INTO whatuneed(need,location,mail) VALUES("'"+wStrin+"'","'"+hStrin+"'","'"+mStrin+"'")", function(err, result) {
     done();
     if(err) return console.error(err);
   });
