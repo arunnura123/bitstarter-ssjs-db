@@ -23,15 +23,17 @@ app.use(app.router);
 
 app.post('/', function (request, response) {
  var data = fs.readFileSync('index.html').toString();
- var newString = request.body.what.replace(/ /g, "-");
+ var wString = request.body.what.replace(/ /g, "-");
+ var hString = request.body.where.replace(/ /g, "-");
+ var mString = request.body.mail.replace(/ /g, "-"); 
  pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
-  client.query("INSERT INTO whatuneed(need,location,mail) VALUES('coffee-shop','Emlur,Bangalore','bob@gmail.com')", function(err, result) {
+  client.query("INSERT INTO whatuneed(need,location,mail) VALUES(wString,hString,mString)", function(err, result) {
     done();
     if(err) return console.error(err);
   });
 });     
-  response.send(newString);
+  response.send(data);
 });
 
 
