@@ -23,6 +23,7 @@ app.use(app.router);
 
 app.post('/', function (request, response) {
  var data = fs.readFileSync('index.html').toString();
+ var newString = request.body.what.replace(/ /g, "-");
  pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
   client.query("INSERT INTO whatuneed(need,location,mail) VALUES('coffee-shop','Emlur,Bangalore','bob@gmail.com')", function(err, result) {
@@ -30,7 +31,7 @@ app.post('/', function (request, response) {
     if(err) return console.error(err);
   });
 });     
-  response.send(data);
+  response.send(newString);
 });
 
 
