@@ -23,7 +23,7 @@ app.use(app.router);
 
 app.post('/', function (request, response) {
  var data = fs.readFileSync('index.html').toString();
- var wString = "'" + request.body.what.replace(/ /g, "_")+"'" ;
+ var wString = '''+ request.body.what.replace(/ /g, "_")+''' ;
  var hString = request.body.where.replace(/ /g, "_");
  var mString = request.body.mail.replace(/ /g, "_"); 
  pg.connect(conf, function(err, client, done) {
@@ -33,7 +33,7 @@ app.post('/', function (request, response) {
     if(err) return console.error(err);
   });
 });     
-  response.send(data);
+  response.send(wstring);
 });
 
 
