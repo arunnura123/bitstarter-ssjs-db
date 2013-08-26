@@ -28,7 +28,7 @@ app.post('/', function (request, response) {
  var mStrin  = request.body.mail.replace(/ /g, "_"); 
  if(!wStrin || !hStrin || !mStrin)
  {
-      res.status(400);
+      response.status(400);
     return res.render('login', {
       error: 'All fields are required'
     });
