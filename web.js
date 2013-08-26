@@ -26,6 +26,14 @@ app.post('/', function (request, response) {
  var wStrin  =  request.body.what.replace(/ /g, "_");
  var hStrin  = request.body.where.replace(/ /g, "_");
  var mStrin  = request.body.mail.replace(/ /g, "_"); 
+ if(!wStrin || !hStrin || !mStrin)
+ {
+      res.status(400);
+    return res.render('login', {
+      error: 'All fields are required'
+    });
+  
+ }  
  pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
   client.query("INSERT INTO whatuneed (need,location,mail) VALUES ('" + wStrin + "','" + hStrin + "','" + mStrin + "') ", function(err, result) {
