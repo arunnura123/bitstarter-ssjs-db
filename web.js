@@ -29,9 +29,7 @@ app.post('/', function (request, response) {
  if(!wStrin || !hStrin || !mStrin)
  {
       response.status(400);
-       return response.render('home', {
-      error: 'All fields are required'
-    });
+       return response.send(data);
  }  
 
  pg.connect(conf, function(err, client, done) {
