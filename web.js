@@ -29,11 +29,8 @@ app.post('/', function (request, response) {
  if(!wStrin || !hStrin || !mStrin)
  {
       response.status(400);
-    return response.render('index', {
-      error: 'All fields are required'
-    });
-  
  }  
+
  pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
   client.query("INSERT INTO whatuneed (need,location,mail) VALUES ('" + wStrin + "','" + hStrin + "','" + mStrin + "') ", function(err, result) {
