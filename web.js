@@ -29,7 +29,7 @@ app.post('/', function (request, response) {
  if(!wStrin || !hStrin || !mStrin)
  {
       response.status(400);
-    return res.render('login', {
+    return response.render('login', {
       error: 'All fields are required'
     });
   
