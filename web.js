@@ -29,7 +29,7 @@ app.post('/', function (request, response) {
  if(!wStrin || !hStrin || !mStrin)
  {
       response.status(400);
-    return response.render('', {
+    return response.render('index.html', {
       error: 'All fields are required'
     });
   
