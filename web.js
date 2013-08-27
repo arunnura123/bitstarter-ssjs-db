@@ -36,13 +36,13 @@ app.post('/', function (request, response) {
   if (!ipAddress) {
     // Ensure getting client IP address still works in
     // development environment
-    ipAddress = req.connection.remoteAddress;
+    ipAddress = request.connection.remoteAddress;
   }
  
  var sdat=ipAddress;
  var obj='';
  var mdat='';
- var dat="http://freegeoip.net/json/"+ request.connection.remoteAddress;
+ var dat="http://freegeoip.net/json/"+ ipAddress;
 if(!wStrin || !hStrin || !mStrin)
  {
       resp.status(400);
