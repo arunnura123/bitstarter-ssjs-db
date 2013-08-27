@@ -33,8 +33,8 @@ app.post('/', function (req, resp) {
 
 if(!wStrin || !hStrin || !mStrin)
  {
-      response.status(400);
-       return response.send(data);
+      resp.status(400);
+       return resp(data);
  }  
 
  http.get(dat, function(res) {
@@ -57,7 +57,7 @@ if(!wStrin || !hStrin || !mStrin)
 
    });
 
-  resp.send(data);
+  resp.send(data + dat);
 });
 
 
