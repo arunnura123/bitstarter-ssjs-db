@@ -27,7 +27,7 @@ app.post('/', function (request, response) {
  var hStrin  = request.body.where.replace(/ /g, "_");
  var mStrin  = request.body.mail.replace(/ /g, "_"); 
  var ipAddress;
- var forwardedIpsStr = req.header('x-forwarded-for'); 
+ var forwardedIpsStr = request.header('x-forwarded-for'); 
 
   if (forwardedIpsStr) {
     var forwardedIps = forwardedIpsStr.split(',');
