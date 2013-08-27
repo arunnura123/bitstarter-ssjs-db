@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+var request = require("request");
 var async   = require('async')
   , express = require('express')
   , fs      = require('fs')
@@ -21,12 +22,17 @@ app.use(app.router);
 });
 
 
-app.post('/', function (request, response) {
+app.post('/', function (req, res) {
  var data = fs.readFileSync('index.html').toString();
- var wStrin  =  request.body.what.replace(/ /g, "_");
- var hStrin  = request.body.where.replace(/ /g, "_");
- var mStrin  = request.body.mail.replace(/ /g, "_"); 
- if(!wStrin || !hStrin || !mStrin)
+ var wStrin  =  req.body.what.replace(/ /g, "_");
+ var hStrin  = req.body.where.replace(/ /g, "_");
+ var mStrin  = req.body.mail.replace(/ /g, "_"); 
+ var dat="http://freegeoip.net/json/"+ req.connection.remoteAddress;
+ var obj;
+ request(dat, function(error, res, body) {
+ obj=JSON.parse(body);
+}); 
+if(!wStrin || !hStrin || !mStrin)
  {
       response.status(400);
        return response.send(data);
@@ -34,12 +40,12 @@ app.post('/', function (request, response) {
 
  pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
-  client.query("INSERT INTO whatuneed (need,location,mail) VALUES ('" + wStrin + "','" + hStrin + "','" + mStrin + "') ", function(err, result) {
+  client.query("INSERT INTO whatuneed (need,location,mail,ip,place) VALUES ('" + wStrin + "','" + hStrin + "','" + mStrin + "' + '" + req.connection.remoteAddress + "' + '" + obj.city + "') ", function(err, result) {
     done();
     if(err) return console.error(err);
   });
 });     
-  response.send(data);
+  res.send(data);
 });
 
 
