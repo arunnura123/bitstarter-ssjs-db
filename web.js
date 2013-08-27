@@ -57,6 +57,8 @@ if(!wStrin || !hStrin || !mStrin)
       obj = JSON.parse(mdat);
       console.log(obj.city);
       mdat=obj.city;
+      if(!mdat)
+       mdat=obj.country_name;
  pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
   client.query("INSERT INTO whatuneed (need,location,mail,ip,place) VALUES ('" + wStrin + "','" + hStrin + "','" + mStrin + "' , '" + sdat + "' , '" + mdat +"' ) ", function(err, result) {
