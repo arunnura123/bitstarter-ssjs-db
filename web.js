@@ -26,11 +26,23 @@ app.post('/', function (request, response) {
  var wStrin  =  request.body.what.replace(/ /g, "_");
  var hStrin  = request.body.where.replace(/ /g, "_");
  var mStrin  = request.body.mail.replace(/ /g, "_"); 
- var dat="http://freegeoip.net/json/"+ request.connection.remoteAddress;
- var sdat=request.connection.remoteAddress;
+ var ipAddress;
+ var forwardedIpsStr = req.header('x-forwarded-for'); 
+
+  if (forwardedIpsStr) {
+    var forwardedIps = forwardedIpsStr.split(',');
+    ipAddress = forwardedIps[0];
+  }
+  if (!ipAddress) {
+    // Ensure getting client IP address still works in
+    // development environment
+    ipAddress = req.connection.remoteAddress;
+  }
+ 
+ var sdat=ipAddress;
  var obj='';
  var mdat='';
-
+ var dat="http://freegeoip.net/json/"+ request.connection.remoteAddress;
 if(!wStrin || !hStrin || !mStrin)
  {
       resp.status(400);
