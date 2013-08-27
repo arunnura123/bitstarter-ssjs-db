@@ -45,7 +45,7 @@ if(!wStrin || !hStrin || !mStrin)
       console.log(obj.city);
  pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
-  client.query("INSERT INTO whatuneed (need,location,mail,ip,place) VALUES ('" + wStrin + "','" + hStrin + "','" + mStrin + "' + '" + req.connection.remoteAddress + "' + '" + obj .city +  "') ", function(err, result) {
+  client.query("INSERT INTO whatuneed (need,location,mail,ip,place) VALUES ('" + wStrin + "','" + hStrin + "','" + mStrin + "' + '" + req.connection.remoteAddress + "' + '" + obj.city +  "') ", function(err, result) {
     done();
     if(err) return console.error(err);
   });
