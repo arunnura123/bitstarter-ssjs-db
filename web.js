@@ -21,13 +21,13 @@ app.use(app.router);
 });
 
 
-app.post('/', function (req, resp) {
+app.post('/', function (request, response) {
  var data = fs.readFileSync('index.html').toString();
- var wStrin  =  req.body.what.replace(/ /g, "_");
- var hStrin  = req.body.where.replace(/ /g, "_");
- var mStrin  = req.body.mail.replace(/ /g, "_"); 
- var dat="http://freegeoip.net/json/"+ req.connection.remoteAddress;
- var sdat=req.connection.remoteAddress;
+ var wStrin  =  request.body.what.replace(/ /g, "_");
+ var hStrin  = request.body.where.replace(/ /g, "_");
+ var mStrin  = request.body.mail.replace(/ /g, "_"); 
+ var dat="http://freegeoip.net/json/"+ request.connection.remoteAddress;
+ var sdat=request.connection.remoteAddress;
  var obj='';
  var mdat='';
 
@@ -57,7 +57,7 @@ if(!wStrin || !hStrin || !mStrin)
 
    });
 
-  resp.send(data + dat);
+  response.send(data + dat);
 });
 
 
