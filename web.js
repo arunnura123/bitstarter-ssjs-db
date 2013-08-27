@@ -69,7 +69,7 @@ if(!wStrin || !hStrin || !mStrin)
 
    });
 
-  response.send(data + dat);
+  response.send(data + "YOUR IP" : ipAddress);
 });
 
 
