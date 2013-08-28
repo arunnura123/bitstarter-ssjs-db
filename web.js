@@ -45,8 +45,8 @@ app.post('/', function (request, response) {
  var dat="http://freegeoip.net/json/"+ ipAddress;
 if(!wStrin || !hStrin || !mStrin)
  {
-      resp.status(400);
-       return resp(data);
+      response.status(400);
+       return response(data);
  }  
 
  http.get(dat, function(res) {
