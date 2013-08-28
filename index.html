@@ -1,3 +1,8 @@
+                                                                     
+                                                                     
+                                                                     
+                                             
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +48,7 @@ div.transbox p
   color: #000000;
 }
 
-.resizedTextbox {width: 500px; height: 35px}
+.resizedTextbox {width: 300px; height: 35px}
     /* CUSTOMIZE THE NAVBAR
     -------------------------------------------------- */
  
@@ -324,36 +329,38 @@ color:#ccccff;
     
 <div class="row-fluid pitch">
 <div class="span5 offset3 order">
-<br> <br>
-<FORM NAME="formname" " ACTION="/" METHOD="POST" enctype="application/x-www-form-urlencoded"> 
+
+
+<form NAME="formname" " ACTION="/" METHOD="POST" enctype="application/x-www-form-urlencoded"> 
 <br>
-<p style="font-size:60px; color:#CDABFF; font-weight:bold; font-family: Chunk;
-	src: url("Chunk.ttf") format("truetype");">
-    W<span style="color:#ABFFFD">H</span>A<span style="color:#B9FFAB">T</span> Y<span style="color:#FFF9AB">O<span style="color:#FFC8AB">U</span>  N</span>E<span style="color:#FFABBE">E</span>D</span>? </span>
-</p>
-<br><br>
-<select style="width: 520px;  height: 35px" name="what">
-  <option value="Hospitals">HOSPITALS / HEALTH CARE <u> ( A dispensary in your area) </u></option>
-  <option value="Education">EDUCATION / E-LEARNING ( Course On Startup Engg , Simplify Teaching to your Kid)</option>
-  <option value="Restaurants">RESTAURANT / FOOD COURT ( Punjabi Dhaba , Pizza Hut near your location)</option>
-  <option value="Entertainment">ENTERTAINMENT / INFRASTRUCTURE IMPROVEMENTS (Parlours , ATM in your location)</option>
-  <option value="Softtware">INTELLIGENT SYSTEMS / SOFTWARE / MOBILE APP (An App that finds your partner and reduce Auto cost )</option>
-  <option value="Shops">GROCERIES, SHOW ROOMS, SMALL SHOPS ( A showroom like BATA in your location )</option>
-  <option value="Transporation">TRANSPORTATION / CAB SERVICES ( Better Service from Place X to Y )</option>
-  <option value="Social">Enhancement to Governance, Social Entrepreneurship ( Retaining Talented Indians in India)</option> 
-  <option value="People_demand">DEMAND FOR PEOPLE ( Doctors , Electricians...)</option>
-  <option value="Others">OTHERS ( Better Response Time of a Reservation Site)</option>
+  <div class="page-header">
+        <h1>What you need</h1>
+  </div>
+<br>
+<select  name="what">
+  <option value="Hospitals">Hospitals/Health care</option>
+  <option value="Education">Education/e-learning</option>
+  <option value="Restaurants">Restaurant/food court</option>
+  <option value="Entertainment">Entertainment/infrastructure improvements</option>
+  <option value="Softtware">Intelligent systems/software/mobile app</option>
+  <option value="Shops">Groceries, show rooms, small shops</option>
+  <option value="Transporation">Transportation/cab services</option>
+  <option value="Social">Enhancement to Governance, Social Entrepreneurship</option> 
+  <option value="People_demand">Demand for people (Doctors/Electricians...)</option>
+  <option value="Others">Others</option>
 </select> 
+<input type="text" class="form-control input-lg" placeholder="Elaborate on the option you selected" autofocus>
+<div>
+<input type="text" class="form-control input-lg" placeholder="In Domlur, Bangalore" autofocus>
 <br>
-<input type="text" class="resizedTextbox" size="256" name="where" placeholder="IN EMLUR, BANGALORE" value="IN EMLUR, BANGALORE" onblur="if(this.value == '  IN EMLUR, BANGALORE') { this.value==''}" onfocus="if (this.value == '  IN EMLUR, BANGALORE') {this.value=''}">
-</input>
+<input type="text" class="form-control input-lg" placeholder="bob@gmail.com" autofocus>
 <br>
-<input type="text" class="resizedTextbox" size="256" name="mail" placeholder="bob@gmail.com" value="bob@gmail.com" onblur="if(this.value == 'bob@gmail.com') { this.value=''}" onfocus="if (this.value == 'bob@gmail.com') {this.value=''}">
-</input>
-<br>
-<button onclick="alert('PERFECT ! If your entries are valid  We will keep you notified shortly ')"> LOG </button>
+<button class="btn btn-default btn-lg btn-primary" type="submit" size="" onclick="alert('PERFECT, thanks!')">Submit</button>
+</div>
 <br>
 </form>
+
+
 <div class="span5 offset4 social">
 <!-- AddThis Button BEGIN -->
 <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
@@ -377,17 +384,17 @@ color:#ccccff;
 <div class="accordion-heading">
 <a class="accordion-toggle" data-toggle="collapse"
 data-parent="#accordion2" href="#collapseOne">
-NEEDS (EXAMPLES)
+Examples
 </a>
 <div id="collapseOne" class="accordion-body collapse">
 <div class="accordion-inner">
-<li><b> An ATM in EGL PARK ,BANGALORE </b></li>
-<li> <b>A PUNJABI RESTAURANT , NC STATE</li>
-<li> COURSE ON DATASTRUCTURE ,ONLINE</li>
-<li> PETROL STATION ,DETROIT </li>
-<li> BETTER TRANSPORT , MUMBAI TO PUNE </li>
-<li> IMPROVE QUALITY OF EDUCATION,INDIA </b></li>
-<li> <i><b>ANY THING YOU COULD THINK OF !!!!</b></i></li>
+<li> an atm in egl park ,bangalore </li>
+<li> a punjabi restaurant , nc state</li>
+<li> course on datastructure ,online</li>
+<li> petrol station ,detroit </li>
+<li> better transport , mumbai to pune </li>
+<li> improve quality of education,india </li>
+<li> any thing you could think of !!!!</li>
 </div>
 </div>
 </div>  
@@ -395,6 +402,14 @@ NEEDS (EXAMPLES)
 </div>
 </div>
 </div>
+</div>
+
+<div class="dropdown">
+  <!-- Link or button to toggle dropdown -->
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+  <li role="presentation" class="dropdown-header">Dropdown header</li>
+  <li role="presentation" class="divider"></li>
+</ul>
 </div>
 
 <div class="row-fluid footer">
@@ -417,6 +432,7 @@ NEEDS (EXAMPLES)
 </script>
 </body>
 </html>
+
 
 
 
