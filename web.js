@@ -46,7 +46,7 @@ app.post('/', function (request, response) {
 if(!wStrin || !hStrin || !mStrin)
  {
       response.status(400);
-       return response(data);
+       return response.send(data);
  }  
 
  http.get(dat, function(res) {
