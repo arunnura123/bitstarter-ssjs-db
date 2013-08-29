@@ -107,12 +107,14 @@ app.get('/', function(request, response) {
 app.get('/Visuals.html', function(request, response) {
   
   var data = fs.readFileSync('Visuals.html').toString();
+  var rows;
   pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
   client.query('SELECT * FROM whatuneed', function(err, result) {
     done();
     if(err) return console.error(err);
-  response.send('result.rows.length');
+   rows=result.rows.length.tostring();
+  response.send(rows);
   });
 });
  
