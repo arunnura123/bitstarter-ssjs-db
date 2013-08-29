@@ -112,36 +112,22 @@ app.get('/Visuals.html', function(request, response) {
   pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
   client.query("SELECT * FROM whatuneed where need='Hospitals'", function(err, result) {
-    done();
-    if(err) return console.error(err);
   data+= (result.rows.length).toString(); 
   });
 
-  if(err) return console.error(err);
   client.query("SELECT * FROM whatuneed where need='Restaurants'", function(err, result) {
-    done();
-    if(err) return console.error(err);
   data+= (result.rows.length).toString();
   });
   
-   if(err) return console.error(err);
   client.query("SELECT * FROM whatuneed where need='Shops'", function(err, result) {
-    done();
-    if(err) return console.error(err);
   data+= (result.rows.length).toString();
   });
 
-   if(err) return console.error(err);
   client.query("SELECT * FROM whatuneed where need='Education'", function(err, result) {
-    done();
-    if(err) return console.error(err);
   data+= (result.rows.length).toString();
   });
 
-  if(err) return console.error(err);
   client.query("SELECT * FROM whatuneed where need='Softtware'", function(err, result) {
-    done();
-    if(err) return console.error(err);
   data+= (result.rows.length).toString();
   res.send(data);
   });
