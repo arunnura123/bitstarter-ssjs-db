@@ -71,6 +71,9 @@ if(!wStrin || !hStrin || !mStrin)
 
    });
 
+   request.on('end', function () {
+
+        });
   response.send(data + "YOUR IP :" + ipAddress);
 });
 
