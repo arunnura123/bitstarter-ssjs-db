@@ -108,32 +108,34 @@ app.get('/', function(request, response) {
 app.get('/Visuals.html', function(request, response) {
   
   var data = fs.readFileSync('Visuals.html').toString();
+  var datatb=fs.readFileSync('Visuals_b.html').toString();
   var rows;
   pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
   client.query("SELECT * FROM whatuneed where need='Hospitals'", function(err, result) {
   done();
-  data+= (result.rows.length).toString(); 
+  data+= "['Categories', 'Number']," + " ['Health_Care', " +  (result.rows.length).toString() + "]," ; 
   });
 
   client.query("SELECT * FROM whatuneed where need='Restaurants'", function(err, result) {
   done();
-  data+= (result.rows.length).toString();
+  data+= " ['Food_Courts', " +  (result.rows.length).toString() + "]," ;
   });
   
   client.query("SELECT * FROM whatuneed where need='Shops'", function(err, result) {
   done();
-  data+= (result.rows.length).toString();
+  data+= " ['Shop', " +  (result.rows.length).toString() + "]," ;
   });
 
   client.query("SELECT * FROM whatuneed where need='Education'", function(err, result) {
   done(); 
-  data+= (result.rows.length).toString();
+  data+= " ['Education', " +  (result.rows.length).toString() + "]," ;
   });
 
   client.query("SELECT * FROM whatuneed where need='Softtware'", function(err, result) {
   done();
-  data+= (result.rows.length).toString();
+  data+= " ['Software', " +  (result.rows.length).toString() + "]," ;
+  data+=datatb; 
   response.send(data);
   });
 
