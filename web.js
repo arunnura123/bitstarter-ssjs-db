@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 var async   = require('async')
   , express = require('express')
-  , expressValidator = require('express-validator')
   , fs      = require('fs')
   , http    = require('http')
   , https   = require('https')
@@ -17,7 +16,6 @@ app.set('port', process.env.PORT || 8080);
 
 app.configure(function(){
 app.use(express.bodyParser());
-app.use(expressValidator());
 app.use(app.router);
   
 });
@@ -25,12 +23,7 @@ app.use(app.router);
 
 app.post('/', function (request, response) {
  var data = fs.readFileSync('index.html').toString();
- req.assert('mail', 'valid email required').isEmail();
  var errors = req.validationErrors();
-  if (errors) {
-                res.send('There have been validation errors: ' + util.inspect(errors), 400);
-                return;
-              }
  var wStrin  =  request.body.what.replace(/ /g, "_");
  var hStrin  = request.body.where.replace(/ /g, "_");
  var mStrin  = request.body.mail.replace(/ /g, "_"); 
