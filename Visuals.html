@@ -6,25 +6,3 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Categories', 'Number'],
-          ['Education',     11],
-          ['Sofware',      2],
-          ['Health Care',  2],
-          ['Transport', 2],
-          ['Shops',    7]
-        ]);
-
-        var options = {
-          title: 'Percentage of entries',
-          is3D: true,
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
-  </body>
-</html>
