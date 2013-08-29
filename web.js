@@ -113,8 +113,7 @@ app.get('/Visuals.html', function(request, response) {
   client.query('SELECT * FROM whatuneed', function(err, result) {
     done();
     if(err) return console.error(err);
-   rows=result.rows.length.tostring();
-  response.send(rows);
+  response.send(result.rows);
   });
 });
  
