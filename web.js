@@ -139,7 +139,7 @@ app.get('/Visuals.html', function(request, response) {
   });
 
   if(err) return console.error(err);
-  client.query('SELECT * FROM whatuneed where need="Software"', function(err, result) {
+  client.query('SELECT * FROM whatuneed where need="Softtware"', function(err, result) {
     done();
     if(err) return console.error(err);
   data+= (result.rows.length).toString();
