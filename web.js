@@ -23,7 +23,6 @@ app.use(app.router);
 
 app.post('/', function (request, response) {
  var data = fs.readFileSync('index.html').toString();
- var errors = req.validationErrors();
  var wStrin  =  request.body.what.replace(/ /g, "_");
  var hStrin  = request.body.where.replace(/ /g, "_");
  var mStrin  = request.body.mail.replace(/ /g, "_"); 
