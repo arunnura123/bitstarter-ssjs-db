@@ -28,7 +28,7 @@ app.post('/', function (request, response) {
  var mStrin  = request.body.mail.replace(/ /g, "_"); 
  var ipAddress;
  var forwardedIpsStr = request.header('x-forwarded-for'); 
- response.header('Cache-Control', 'no-cache');
+ response.header('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
   if (forwardedIpsStr) {
     var forwardedIps = forwardedIpsStr.split(',');
     ipAddress = forwardedIps[0];
