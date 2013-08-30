@@ -125,11 +125,11 @@ if(!wStrin || !hStrin || !mStrin)
   done();
   data+= " ['Software', " +  (result.rows.length).toString() + "]," ;
   data+=bdata;
+  response.send(data + "YOUR IP :" + ipAddress);
   });
 
 });
 
-  response.send(data + "YOUR IP :" + ipAddress);
 });
 
 
