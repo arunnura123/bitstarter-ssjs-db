@@ -65,17 +65,7 @@ if(!wStrin || !hStrin || !mStrin)
     done();
     if(err) return console.error(err);
   });
-});    
 
-    });
-
-   });
-
-   request.on('end', function () {
-
-        });
-  pg.connect(conf, function(err, client, done) {
- if(err) return console.error(err);
   client.query("SELECT * FROM whatuneed where need='Hospitals'", function(err, result) {
   done();
   data+= "['Categories', 'Number']," + " ['Health_Care', " +  (result.rows.length).toString() + "]," ;
@@ -127,6 +117,11 @@ if(!wStrin || !hStrin || !mStrin)
   data+=bdata;
   response.send(data + "YOUR IP :" + ipAddress);
   });
+
+
+});
+
+});
 
 });
 
