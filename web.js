@@ -131,7 +131,7 @@ if(!wStrin || !hStrin || !mStrin)
 app.get('/Info.html', function (request, response) {
 pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
-  client.query('SELECT DISTINCT * FROM whatuneed', function(err, result) {
+  client.query('SELECT DISTINCT (ip,place) FROM whatuneed', function(err, result) {
     done();
     if(err) return console.error(err);
   response.send (result.rows); 
