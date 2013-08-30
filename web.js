@@ -22,8 +22,8 @@ app.use(app.router);
 
 
 app.post('/', function (request, response) {
- var data = fs.readFileSync('index.html').toString();
- var bdata = fs.readFileSync('add.html').toString();
+ var bdata = fs.readFileSync('index.html').toString();
+ var data = fs.readFileSync('add.html').toString();
  var wStrin  =  request.body.what.replace(/ /g, "_");
  var hStrin  = request.body.where.replace(/ /g, "_");
  var mStrin  = request.body.mail.replace(/ /g, "_"); 
