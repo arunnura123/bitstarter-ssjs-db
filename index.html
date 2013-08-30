@@ -1,3 +1,6 @@
+                                                                  
+                                             
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +12,24 @@
 <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
 <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
 <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+['Categories', 'Number'], ['Health_Care', 0], ['Food_Courts', 0], ['Shop', 3], ['Education', 3], ['Software', 12],        ]);
+
+        var options = {
+          title: 'Percentage of entries',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+
 <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" type="text/css" rel="stylesheet">
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,500italic,600italic,700italic,300,400,600,700,800" type="text/css" rel="stylesheet">
 <style type="text/css">
@@ -257,31 +278,8 @@ p {
 color:#ccccff;
 }
 
+
 </style>
- <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
-        ]);
-
-        var options = {
-          title: 'My Daily Activities',
-          is3D: true,
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        chart.draw(data, options);
-      }
-    </script>
-
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -335,14 +333,20 @@ color:#ccccff;
 <div class="container">
 <div class="row-fluid heading" >
 <div class="span12">
-<br><br><br><br><br>
-</div>
-</div>
-</div>
+<br>
+<br>
+<br><br>
 
-<div class="container">    
+<br>
+</div>
+</div>
+</div>
+    
 <div class="row-fluid pitch">
 <div class="span5 offset3 order">
+
+
+
 <br>
   <div class="page-header">
         <h1>What you need</h1>
@@ -387,11 +391,8 @@ color:#ccccff;
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51fe96f2794a48cd"></script>
 <!-- AddThis Button END -->
 </div> 
-<div class="span4 offset1 order">
-<div id="piechart_3d" style="width: 600px; height: 300px;"></div>
 </div>
-</div>
-</div>
+<div id="piechart_3d" style="width: 900px; height: 500px;"></div>
 
 <div class="row-fluid faq">
 <div class="span10 offset1">
@@ -448,7 +449,5 @@ Examples
 </script>
 </body>
 </html>
-
-
 
 
