@@ -140,6 +140,11 @@ pg.connect(conf, function(err, client, done) {
 });
 
 
+app.get('/NLP.html', function(request, response) {
+  response.send("We are working on Natural Language processing to understand your submissions. We would be launching shortly");
+});
+
+
 // Render homepage (note trailing slash): example.com/
 
 app.get('/Preoder.html', function(request, response) {
