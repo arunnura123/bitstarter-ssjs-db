@@ -28,7 +28,6 @@ app.post('/', function (request, response) {
  var mStrin  = request.body.mail.replace(/ /g, "_"); 
  var ipAddress;
  var forwardedIpsStr = request.header('x-forwarded-for'); 
- response.header('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
   if (forwardedIpsStr) {
     var forwardedIps = forwardedIpsStr.split(',');
     ipAddress = forwardedIps[0];
@@ -132,6 +131,31 @@ app.get('/Visuals.html', function(request, response) {
   client.query("SELECT * FROM whatuneed where need='Education'", function(err, result) {
   done(); 
   data+= " ['Education', " +  (result.rows.length).toString() + "]," ;
+  });
+
+   client.query("SELECT * FROM whatuneed where need='Entertainment'", function(err, result) {
+  done();
+  data+= " ['Entertainment', " +  (result.rows.length).toString() + "]," ;
+  }); 
+
+   client.query("SELECT * FROM whatuneed where need='People_demand'", function(err, result) {
+  done();
+  data+= " ['People_demand', " +  (result.rows.length).toString() + "]," ;
+  });
+
+   client.query("SELECT * FROM whatuneed where need='Transporation'", function(err, result) {
+  done();
+  data+= " ['Transporation', " +  (result.rows.length).toString() + "]," ;
+  });
+
+   client.query("SELECT * FROM whatuneed where need='Others'", function(err, result) {
+  done();
+  data+= " ['Others', " +  (result.rows.length).toString() + "]," ;
+  });
+
+  client.query("SELECT * FROM whatuneed where need='Social'", function(err, result) {
+  done();
+  data+= " ['Social', " +  (result.rows.length).toString() + "]," ;
   });
 
   client.query("SELECT * FROM whatuneed where need='Softtware'", function(err, result) {
