@@ -99,8 +99,64 @@ app.get('/Preoder.html', function(request, response) {
 
 
 app.get('/', function(request, response) {
-  var data = fs.readFileSync('index.html').toString();
+  var bdata = fs.readFileSync('index.html').toString();
+  var data=fs.readFileSync('add.html').toString();
+    pg.connect(conf, function(err, client, done) {
+ if(err) return console.error(err);
+  client.query("SELECT * FROM whatuneed where need='Hospitals'", function(err, result) {
+  done();
+  data+= "['Categories', 'Number']," + " ['Health_Care', " +  (result.rows.length).toString() + "]," ;
+  });
+
+  client.query("SELECT * FROM whatuneed where need='Restaurants'", function(err, result) {
+  done();
+  data+= " ['Food_Courts', " +  (result.rows.length).toString() + "]," ;
+  });
+
+  client.query("SELECT * FROM whatuneed where need='Shops'", function(err, result) {
+  done();
+  data+= " ['Shop', " +  (result.rows.length).toString() + "]," ;
+  });
+
+  client.query("SELECT * FROM whatuneed where need='Education'", function(err, result) {
+  done();
+  data+= " ['Education', " +  (result.rows.length).toString() + "]," ;
+  });
+
+   client.query("SELECT * FROM whatuneed where need='Entertainment'", function(err, result) {
+  done();
+  data+= " ['Entertainment', " +  (result.rows.length).toString() + "]," ;
+  });
+
+   client.query("SELECT * FROM whatuneed where need='People_demand'", function(err, result) {
+  done();
+  data+= " ['People_demand', " +  (result.rows.length).toString() + "]," ;
+  });
+
+   client.query("SELECT * FROM whatuneed where need='Transporation'", function(err, result) {
+  done();
+  data+= " ['Transporation', " +  (result.rows.length).toString() + "]," ;
+  });
+
+   client.query("SELECT * FROM whatuneed where need='Others'", function(err, result) {
+  done();
+  data+= " ['Others', " +  (result.rows.length).toString() + "]," ;
+  });
+
+  client.query("SELECT * FROM whatuneed where need='Social'", function(err, result) {
+  done();
+  data+= " ['Social', " +  (result.rows.length).toString() + "]," ;
+  });
+
+  client.query("SELECT * FROM whatuneed where need='Softtware'", function(err, result) {
+  done();
+  data+= " ['Software', " +  (result.rows.length).toString() + "]," ;
+  data+=bdata;
   response.send(data);
+  });
+
+});
+ 
 });
 
 
