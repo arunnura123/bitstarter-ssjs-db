@@ -46,7 +46,7 @@ app.post('/', function (request, response) {
 if(!wStrin || !hStrin || !mStrin)
  {
       response.status(400);
-       return response.send(data + " Error Processing " );
+       return response.send(" Error Processing - No Junk data please !!! Refresh to submit " );
  }  
 
  http.get(dat, function(res) {
