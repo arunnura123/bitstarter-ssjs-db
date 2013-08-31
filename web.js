@@ -129,8 +129,9 @@ if(!wStrin || !hStrin || !mStrin)
 
 
 app.get('/Info.html', function (request, response) {
-var data = fs.readFileSync('Infof.html').toString();
+var data = fs.readFileSync('test.html').toString();
 var bdata = fs.readFileSync('infob.html').toString();
+ response.send (data + "hello");
 pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
   client.query('SELECT DISTINCT need,location,ip,place FROM whatuneed', function(err, result) {
