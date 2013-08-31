@@ -129,7 +129,7 @@ if(!wStrin || !hStrin || !mStrin)
 
 
 app.get('/Info.html', function (request, response) {
-var data = fs.readFileSync('Infoh.html').toString();
+var data = fs.readFileSync('Infof.html').toString();
 var bdata = fs.readFileSync('infob.html').toString();
 pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
