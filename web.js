@@ -129,7 +129,8 @@ if(!wStrin || !hStrin || !mStrin)
 
 
 app.get('/Info.html', function (request, response) {
-var data='';
+var data = fs.readFileSync('Infof.html').toString();
+var bdata = fs.readFileSync('Infob.html').toString();
 pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
   client.query('SELECT DISTINCT need,location,ip,place FROM whatuneed', function(err, result) {
@@ -142,7 +143,7 @@ pg.connect(conf, function(err, client, done) {
             }
     done();
     if(err) return console.error(err);
-   
+  data+=bdata; 
   response.send (data); 
   }); 
 });
