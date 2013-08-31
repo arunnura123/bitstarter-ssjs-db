@@ -1,0 +1,19 @@
+ ]);
+    
+      // Create and draw the visualization.
+      var table = new google.visualization.Table(document.getElementById('visualization'));
+    
+      var formatter = new google.visualization.TableNumberFormat(
+          {prefix: "$", negativeColor: 'red', negativeParens: true});
+      formatter.format(data, 1); // Apply formatter to second column
+    
+      table.draw(data, {allowHtml: true, showRowNumber: true});
+    }
+    
+    google.setOnLoadCallback(drawVisualization);
+  </script>
+</head>
+<body style="font-family: Arial;border: 0 none;">
+<div id="visualization" style="width: 800px; height: 400px;"></div>
+</body>
+</html>
