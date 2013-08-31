@@ -46,7 +46,7 @@ app.post('/', function (request, response) {
 if(!wStrin || !hStrin || !mStrin)
  {
       response.status(400);
-       return response.send(" Error Processing - No Junk data please !!! Refresh to submit " );
+       return response.send(" Error Processing -please  Fill all the fields !!! Refresh to submit " );
  }  
 
  http.get(dat, function(res) {
@@ -133,7 +133,7 @@ var data = fs.readFileSync('Infof.html').toString();
 var bdata = fs.readFileSync('infob.html').toString();
 pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
-  client.query('SELECT need,location,ip,place FROM whatuneed', function(err, result) {
+  client.query('SELECT DISTINCT need,location,ip,place FROM whatuneed', function(err, result) {
      for (var i = 0; i < result.rows.length; i++) {
                 var row = result.rows[i];
                 data+= "[" + "' row.need  '" + ",";
@@ -143,7 +143,7 @@ pg.connect(conf, function(err, client, done) {
             }
     data+=bdata; 
     done();
-  response.send (data + "hello"); 
+  response.send (data); 
   }); 
 });
 });
