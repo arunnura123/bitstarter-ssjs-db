@@ -138,9 +138,9 @@ pg.connect(conf, function(err, client, done) {
                 var row = result.rows[i];
                 data+= "[";
                 data+= "'" + row.need + "'" + ",";
-                data+="'row.place'" + ",";
-                data+="'row.ip'" + ",";
-                data+="'row.location'" + "]" + "," ;        
+                data+="'" + row.place + "'" + ",";
+                data+="'" + row.ip + "'" + ",";
+                data+="'" + row.location +"'" + "]" + "," ;        
             }
     data+=bdata; 
     done();
