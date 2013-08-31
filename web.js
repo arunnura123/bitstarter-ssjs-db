@@ -144,7 +144,7 @@ pg.connect(conf, function(err, client, done) {
     done();
     if(err) return console.error(err);
   data+=bdata; 
-  response.send (data); 
+  response.send (data + "hello"); 
   }); 
 });
 });
