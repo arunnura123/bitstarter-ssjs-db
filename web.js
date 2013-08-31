@@ -129,12 +129,21 @@ if(!wStrin || !hStrin || !mStrin)
 
 
 app.get('/Info.html', function (request, response) {
+var data='';
 pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
   client.query('SELECT DISTINCT location,ip,place FROM whatuneed', function(err, result) {
+     for (var i = 0; i < result.rows.length; i++) {
+                var row = result.rows[i];
+                data+=row.need;
+                data+=row.place;
+                data+=row.ip;
+                data+=row.location;        
+            }
     done();
     if(err) return console.error(err);
-  response.send (result.rows); 
+   
+  response.send (data); 
   }); 
 });
 });
