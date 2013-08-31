@@ -136,14 +136,13 @@ pg.connect(conf, function(err, client, done) {
   client.query('SELECT DISTINCT need,location,ip,place FROM whatuneed', function(err, result) {
      for (var i = 0; i < result.rows.length; i++) {
                 var row = result.rows[i];
-                data+= "[" + '" + row.need + "' + ",";
+                data+= "[" + "row.need" + ",";
                 data+="row.place" + ",";
                 data+="row.ip" + ",";
                 data+="row.location" + "]" + "," ;        
             }
+     
     done();
-    if(err) return console.error(err);
-  data+=bdata; 
   response.send (data + "hello"); 
   }); 
 });
