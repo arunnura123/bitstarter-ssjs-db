@@ -1,16 +1,23 @@
+]);
 
-
-          ]);
         var options = {
-          title: '',
-          is3D: true,
+          title: 'Visuals',
+          legend: 'none',
+          pieSliceText: 'label',
+          slices: {  4: {offset: 0.2},
+                    12: {offset: 0.3},
+                    14: {offset: 0.4},
+                    15: {offset: 0.5},
+          },
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
         chart.draw(data, options);
       }
 
-    </script>
+    </scrupt>
   </head>
   <body>
      <div class="navbar navbar-inverse navbar-fixed-top">
@@ -40,6 +47,6 @@
     <br>
     <br>
 
-    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
   </body>
 </html>
