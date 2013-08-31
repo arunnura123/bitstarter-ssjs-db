@@ -129,20 +129,19 @@ if(!wStrin || !hStrin || !mStrin)
 
 
 app.get('/Info.html', function (request, response) {
-var mdata = fs.readFileSync('Infof.html').toString();
+var data = fs.readFileSync('Infof.html').toString();
 var bdata = fs.readFileSync('infob.html').toString();
-var data='';
 pg.connect(conf, function(err, client, done) {
  if(err) return console.error(err);
   client.query('SELECT need,location,ip,place FROM whatuneed', function(err, result) {
      for (var i = 0; i < result.rows.length; i++) {
                 var row = result.rows[i];
-                data+= "[" + "' row.need  + '" + ",";
-                data+="' + row.place + '" + ",";
-                data+="' + row.ip + '" + ",";
-                data+="' + row.location  + '" + "]" + "," ;        
+                data+= "[" + "' row.need  '" + ",";
+                data+="'row.place'" + ",";
+                data+="'row.ip'" + ",";
+                data+="'row.location'" + "]" + "," ;        
             }
-     
+    data+=bdata; 
     done();
   response.send (data + "hello"); 
   }); 
